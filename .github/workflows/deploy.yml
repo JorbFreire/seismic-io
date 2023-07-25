@@ -17,10 +17,9 @@ jobs:
 
     - name: git config name
       run: git config user.name "CICD BOT"
-      # run: ls -la .git/config
 
-    # - name: Commit and push updated version
-    #   run: git commit -m "empty commit" --allow-empty --author="CICD BOT <cicd@bot.com>"
+    - name: Commit and push updated version
+      run: git commit -m "empty commit" --allow-empty --author="CICD BOT <cicd@bot.com>"
 
-    # - name: push
-    #   run: git push
+    - name: push
+      run: git push
