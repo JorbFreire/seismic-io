@@ -13,4 +13,7 @@ jobs:
     - uses: actions/checkout@main
 
     - name: Commit and push updated version
-      run: git commit -m "empty commit" --allow-empty --no-verify
+      run: git commit -m "empty commit" --allow-empty
+
+    - name: push
+      run: git push
