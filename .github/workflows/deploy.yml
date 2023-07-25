@@ -12,6 +12,9 @@ jobs:
     steps:
     - uses: actions/checkout@main
 
+    - name: git config
+      run: git config user.email "cicd@bot.com" & git config user.name "CICD BOT"
+
     - name: Commit and push updated version
       run: git commit -m "empty commit" --allow-empty --author="CICD BOT <cicd@bot.com>"
 
