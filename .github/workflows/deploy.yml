@@ -13,10 +13,11 @@ jobs:
     - uses: actions/checkout@main
 
     - name: git config
-      run: git config --global user.email "cicd@bot.com" & git config --global user.name "CICD BOT"
+      run: ls -la .git/config
+    #   run: git config --global user.email "cicd@bot.com" & git config --global user.name "CICD BOT"
 
-    - name: Commit and push updated version
-      run: git commit -m "empty commit" --allow-empty --author="CICD BOT <cicd@bot.com>"
+    # - name: Commit and push updated version
+    #   run: git commit -m "empty commit" --allow-empty --author="CICD BOT <cicd@bot.com>"
 
-    - name: push
-      run: git push
+    # - name: push
+    #   run: git push
