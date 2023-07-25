@@ -13,7 +13,7 @@ jobs:
     - uses: actions/checkout@main
 
     - name: Commit and push updated version
-      run: git commit -m "empty commit" --allow-empty
+      run: git commit -m "empty commit" --allow-empty --author="CICD BOT <cicd@bot.com>"
 
     - name: push
       run: git push
