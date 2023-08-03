@@ -21,28 +21,28 @@ jobs:
     - name: Update apt
       run: sudo apt update
 
-    # - name: Install pip
-    #   run: sudo apt install -y python3-pip
+    - name: Install pip
+      run: sudo apt install -y python3-pip
 
-    # - name: Install build dependencies
-    #   run: pip3 install -r requirements.txt
+    - name: Install build dependencies
+      run: pip3 install -r requirements.txt
 
-    # - name: Install twine
-    #   run: python3 -m pip install build twine
+    - name: Install twine
+      run: python3 -m pip install build twine
 
     # # Build
     - name: Upgrade release version
       run: python3 .github/scripts/upgrade_version.py
 
-    # - name: Build
-    #   run: python3 setup.py sdist bdist_wheel
+    - name: Build
+      run: python3 setup.py sdist bdist_wheel
 
-    # # Publish
-    # - name: Check dist before publish
-    #   run: twine check dist/*
+    # Publish
+    - name: Check dist before publish
+      run: twine check dist/*
 
-    # - name: Publish package distributions to PyPI
-    #   uses: pypa/gh-action-pypi-publish@release/v1
+    - name: Publish package distributions to PyPI
+      uses: pypa/gh-action-pypi-publish@release/v1
 
     # Update on github
     - name: git config email
