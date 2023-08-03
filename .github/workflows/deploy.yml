@@ -30,8 +30,8 @@ jobs:
     #   run: python3 -m pip install build twine
 
     # # Build
-    # - name: Upgrade release version
-    #   run: python3 .github/scripts/upgrade_version.py
+    - name: Upgrade release version
+      run: python3 .github/scripts/upgrade_version.py
 
     # - name: Build
     #   run: python3 setup.py sdist bdist_wheel
